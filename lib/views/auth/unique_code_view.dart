@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:produtech/app/app.gr.dart';
+import 'package:produtech/app/locator.dart';
+
 import 'package:produtech/helpers/asset_pallet.dart';
+import 'package:produtech/services/navigation.dart';
 import 'package:produtech/widget/auth_button.dart';
 import 'package:produtech/widget/auth_textfield.dart';
 
@@ -13,6 +17,9 @@ class UniqueCodeView extends HookWidget {
     final codeTextController = useTextEditingController();
     final institutionTextController = useTextEditingController();
     Size size = MediaQuery.of(context).size;
+
+
+    final _navService = locator.get<NavigationService>();
 
     return Scaffold(
       backgroundColor: AssetPallet.whiteColor,
@@ -55,7 +62,7 @@ class UniqueCodeView extends HookWidget {
                 SizedBox(height: size.height * .26),
                 AuthButton(
                   onPressed: () {
-                    // _navService.pushNamed(RoutePath.uniqueCodePath);
+                    _navService.replaceByInfo(const DashboardViewRoute());
                   },
                   text: 'Verify',
                 ),

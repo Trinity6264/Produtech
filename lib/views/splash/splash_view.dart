@@ -20,7 +20,7 @@ class _SplashViewState extends State<SplashView> {
   void waitAWhile() {
     Future.delayed(
       const Duration(seconds: 3),
-      () => _navService.replaceNamed(RoutePath.authPath),
+      () => _navService.replaceNamed(RoutePath.dashboardPath),
     );
   }
 

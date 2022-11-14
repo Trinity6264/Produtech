@@ -21,7 +21,7 @@ class RegisterView extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fullnameTextController = useTextEditingController();
+    final fullNameTextController = useTextEditingController();
     final emailTextController = useTextEditingController();
     final numberTextController = useTextEditingController();
     final passwordTextController = useTextEditingController();
@@ -58,7 +58,7 @@ class RegisterView extends HookWidget {
                 ),
                 SizedBox(height: size.height * .05),
                 AuthTextField(
-                  controller: fullnameTextController,
+                  controller: fullNameTextController,
                   hintText: 'Full Name',
                 ),
                 SizedBox(height: size.height * .02),
@@ -80,10 +80,10 @@ class RegisterView extends HookWidget {
                     ),
                   ),
                   onChanged: (phone) {
-                    print(phone.completeNumber);
+                    log(phone.completeNumber);
                   },
                   onCountryChanged: (country) {
-                    print('Country changed to: ' + country.name);
+                    log('Country changed to: ' + country.name);
                   },
                 ),
                 SizedBox(height: size.height * .02),

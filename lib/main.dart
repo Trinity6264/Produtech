@@ -5,6 +5,8 @@ import 'package:produtech/app/locator.dart';
 import 'package:produtech/controllers/auth/login_controller.dart';
 import 'package:produtech/controllers/auth/pick_favorite_controller.dart';
 import 'package:produtech/controllers/auth/register_controller.dart';
+import 'package:produtech/controllers/dashboard/dashboard_controller.dart';
+import 'package:produtech/controllers/dashboard/explore/explore_controller.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<LoginViewController>.value(value: LoginViewController()),
         ChangeNotifierProvider<RegisterViewController>.value(value: RegisterViewController()),
         ChangeNotifierProvider<PickFavoriteController>.value(value: PickFavoriteController()),
+        ChangeNotifierProvider<DashBoardViewController>.value(value: DashBoardViewController()),
+        ChangeNotifierProvider<ExploreViewController>.value(value: ExploreViewController()),
       ],
       child: MaterialApp.router(
         title: 'Edtech',
