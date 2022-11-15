@@ -1,12 +1,23 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:produtech/app/app.gr.dart';
+import 'package:produtech/app/locator.dart';
+import 'package:produtech/app/routePath.dart';
 import 'package:produtech/helpers/asset_pallet.dart';
+import 'package:produtech/services/navigation.dart';
 import 'package:produtech/views/dashboard/profile/widget/achievement_card.dart';
 import 'package:produtech/widget/auth_button.dart';
 import 'package:produtech/widget/custom_appbar.dart';
 
+// enum for diff type of widget
+
+enum PageWidgetType { account, certificate, prize }
+
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
+  static final _navService = locator.get<NavigationService>();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +52,9 @@ class ProfileView extends StatelessWidget {
                         ),
                         const SizedBox(width: 10),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () => _navService.navigateTo(
+                            SettingViewsRoute(pageType: PageWidgetType.account),
+                          ),
                           icon: const Icon(
                             Icons.settings,
                             color: AssetPallet.deepBlueColor,
@@ -133,10 +146,23 @@ class ProfileView extends StatelessWidget {
                 width: double.infinity,
                 height: size.height * 0.1,
                 child: Row(
-                  children: const [
-                    AchievementCard(value: '0', title: 'Certificate'),
-                    SizedBox(width: 10),
-                    AchievementCard(value: '0', title: 'Prize'),
+                  children: [
+                    AchievementCard(
+                      value: '0',
+                      title: 'Certificate',
+                      onTap: () => _navService.navigateTo(
+                        SettingViewsRoute(pageType: PageWidgetType.certificate),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    AchievementCard(
+                        value: '0',
+                        title: 'Prize',
+                        onTap: () {
+                          _navService.navigateTo(
+                            SettingViewsRoute(pageType: PageWidgetType.prize),
+                          );
+                        }),
                   ],
                 ),
               ),

@@ -9,4 +9,5 @@ class RoutePath {
   static const String pickFavoritePath = '/pickFavoriteView';
   static const String uniqueCodePath = '/uniqueCodeView';
   static const String dashboardPath = '/dashboard-view';
+  static const String settingsPath = '/settingView';
 }

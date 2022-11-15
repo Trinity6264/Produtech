@@ -2,13 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:produtech/helpers/asset_pallet.dart';
 
-  AppBar customAppbar(BuildContext context, Widget child) {
-    Size size = MediaQuery.of(context).size;
-    return AppBar(
-      toolbarHeight: size.height * 0.2,
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      flexibleSpace: Container(
+AppBar customAppbar(BuildContext context, Widget child) {
+  Size size = MediaQuery.of(context).size;
+  return AppBar(
+    toolbarHeight: size.height * 0.2,
+    backgroundColor: Colors.transparent,
+    automaticallyImplyLeading: false,
+    elevation: 0,
+    flexibleSpace: Container(
         padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
         width: double.infinity,
         height: double.infinity,
@@ -27,7 +28,6 @@ import 'package:produtech/helpers/asset_pallet.dart';
             bottomRight: Radius.circular(40),
           ),
         ),
-        child: child
-      ),
-    );
-  }
+        child: child),
+  );
+}

@@ -10,6 +10,7 @@ import 'package:produtech/views/dashboard/explore/explore_view.dart';
 import 'package:produtech/views/dashboard/learning/learning_view.dart';
 import 'package:produtech/views/dashboard/profile/profile_view.dart';
 import 'package:produtech/views/dashboard/saved/saved_view.dart';
+import 'package:produtech/views/dashboard/settings/settings_view.dart';
 import 'package:produtech/views/plan/choose_plan_view.dart';
 import 'package:produtech/views/plan/pick_favourite.dart';
 import 'package:produtech/views/splash/splash_view.dart';
@@ -38,7 +39,8 @@ import 'package:produtech/views/splash/splash_view.dart';
         AutoRoute(path: 'profile-view', page: ProfileView),
       ],
     ),
-    //
+    //other sub routes
+        AutoRoute(path: '/settingView', page: SettingViews),
   ],
 )
 class $AppRouter {}
