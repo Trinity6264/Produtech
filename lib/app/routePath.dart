@@ -11,4 +11,5 @@ class RoutePath {
   static const String dashboardPath = '/dashboard-view';
   static const String settingsPath = '/settingView';
   static const String coursesPath = '/coursesView';
+  static const String coursePreviewPath = '/coursePreviewView';
 }
