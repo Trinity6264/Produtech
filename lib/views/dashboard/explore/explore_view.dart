@@ -65,7 +65,7 @@ class ExploreView extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () => _navService.pushNamed(RoutePath.basketPath),
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 10),
                   width: size.width * 0.12,
@@ -99,9 +99,8 @@ class ExploreView extends StatelessWidget {
                 children: [
                   const TitleWidget(title: 'Courses for you'),
                   TextButton(
-                    onPressed: () => _navService.navigateTo(
-                      const CourseViewRoute()
-                    ),
+                    onPressed: () =>
+                        _navService.navigateTo(const CourseViewRoute()),
                     child: Text(
                       'See More',
                       style: GoogleFonts.poppins(

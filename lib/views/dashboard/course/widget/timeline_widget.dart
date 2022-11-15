@@ -15,7 +15,7 @@ class TimeLineWidget extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: AssetPallet.seaBlueColor,
+        color: AssetPallet.seaBlueColor.withOpacity(.7),
       ),
       alignment: Alignment.centerLeft,
       child: Row(

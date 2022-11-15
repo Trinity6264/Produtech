@@ -5,11 +5,13 @@ import 'package:produtech/views/auth/otp_view.dart';
 import 'package:produtech/views/auth/register_view.dart';
 import 'package:produtech/views/auth/reset_password_view.dart';
 import 'package:produtech/views/auth/unique_code_view.dart';
+import 'package:produtech/views/dashboard/basket/basket_view.dart';
 import 'package:produtech/views/dashboard/course/course_preview_view.dart';
 import 'package:produtech/views/dashboard/course/course_view.dart';
 import 'package:produtech/views/dashboard/dashboard_view.dart';
 import 'package:produtech/views/dashboard/explore/explore_view.dart';
 import 'package:produtech/views/dashboard/learning/learning_view.dart';
+import 'package:produtech/views/dashboard/notification/notification_view.dart';
 import 'package:produtech/views/dashboard/profile/profile_view.dart';
 import 'package:produtech/views/dashboard/saved/saved_view.dart';
 import 'package:produtech/views/dashboard/settings/settings_view.dart';
@@ -45,6 +47,8 @@ import 'package:produtech/views/splash/splash_view.dart';
         AutoRoute(path: '/settingView', page: SettingViews),
         AutoRoute(path: '/coursesView', page: CourseView),
         AutoRoute(path: '/coursePreviewView', page: CoursePreviewView),
+        AutoRoute(path: '/basketView', page: BasketView),
+        AutoRoute(path: '/notificationView', page: NotificationView),
   ],
 )
 class $AppRouter {}

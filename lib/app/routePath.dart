@@ -12,4 +12,5 @@ class RoutePath {
   static const String settingsPath = '/settingView';
   static const String coursesPath = '/coursesView';
   static const String coursePreviewPath = '/coursePreviewView';
+  static const String basketPath = '/basketView';
 }

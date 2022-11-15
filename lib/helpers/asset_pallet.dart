@@ -20,4 +20,5 @@ class AssetPallet {
   static const studentPic1 = 'assets/img/Ellipse 1.png';
   static const studentPic2 = 'assets/img/img3.png';
   static const studentPic3 = 'assets/img/img1.png';
+  static const settingsImg = 'assets/img/setting.png';
 }

@@ -11,8 +11,8 @@
 // ignore_for_file: type=lint
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i18;
-import 'package:flutter/material.dart' as _i19;
+import 'package:auto_route/auto_route.dart' as _i19;
+import 'package:flutter/material.dart' as _i20;
 
 import '../views/auth/auth_view.dart' as _i2;
 import '../views/auth/login_view.dart' as _i4;
@@ -20,87 +20,88 @@ import '../views/auth/otp_view.dart' as _i6;
 import '../views/auth/register_view.dart' as _i3;
 import '../views/auth/reset_password_view.dart' as _i7;
 import '../views/auth/unique_code_view.dart' as _i9;
+import '../views/dashboard/basket/basket_view.dart' as _i14;
 import '../views/dashboard/course/course_preview_view.dart' as _i13;
 import '../views/dashboard/course/course_view.dart' as _i12;
 import '../views/dashboard/dashboard_view.dart' as _i10;
-import '../views/dashboard/explore/explore_view.dart' as _i14;
-import '../views/dashboard/learning/learning_view.dart' as _i15;
-import '../views/dashboard/profile/profile_view.dart' as _i17;
-import '../views/dashboard/saved/saved_view.dart' as _i16;
+import '../views/dashboard/explore/explore_view.dart' as _i15;
+import '../views/dashboard/learning/learning_view.dart' as _i16;
+import '../views/dashboard/profile/profile_view.dart' as _i18;
+import '../views/dashboard/saved/saved_view.dart' as _i17;
 import '../views/dashboard/settings/settings_view.dart' as _i11;
 import '../views/plan/choose_plan_view.dart' as _i5;
 import '../views/plan/pick_favourite.dart' as _i8;
 import '../views/splash/splash_view.dart' as _i1;
 
-class AppRouter extends _i18.RootStackRouter {
-  AppRouter([_i19.GlobalKey<_i19.NavigatorState>? navigatorKey])
+class AppRouter extends _i19.RootStackRouter {
+  AppRouter([_i20.GlobalKey<_i20.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
-  final Map<String, _i18.PageFactory> pagesMap = {
+  final Map<String, _i19.PageFactory> pagesMap = {
     SplashViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.SplashView(),
       );
     },
     AuthViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i2.AuthView(),
       );
     },
     RegisterViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i3.RegisterView(),
       );
     },
     LoginViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i4.LoginView(),
       );
     },
     ChoosePlanViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i5.ChoosePlanView(),
       );
     },
     OtpViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i6.OtpView(),
       );
     },
     ResetPasswordViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i7.ResetPasswordView(),
       );
     },
     PickFavoritesViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i8.PickFavoritesView(),
       );
     },
     UniqueCodeViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i9.UniqueCodeView(),
       );
     },
     DashboardViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i10.DashboardView(),
       );
     },
     SettingViewsRoute.name: (routeData) {
       final args = routeData.argsAs<SettingViewsRouteArgs>();
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i11.SettingViews(
           key: args.key,
@@ -109,131 +110,141 @@ class AppRouter extends _i18.RootStackRouter {
       );
     },
     CourseViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i12.CourseView(),
       );
     },
     CoursePreviewViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i13.CoursePreviewView(),
       );
     },
-    ExploreViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+    BasketViewRoute.name: (routeData) {
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i14.ExploreView(),
+        child: const _i14.BasketView(),
+      );
+    },
+    ExploreViewRoute.name: (routeData) {
+      return _i19.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i15.ExploreView(),
       );
     },
     LearningViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i15.LearningView(),
+        child: const _i16.LearningView(),
       );
     },
     SavedViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i16.SavedView(),
+        child: const _i17.SavedView(),
       );
     },
     ProfileViewRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i17.ProfileView(),
+        child: const _i18.ProfileView(),
       );
     },
   };
 
   @override
-  List<_i18.RouteConfig> get routes => [
-        _i18.RouteConfig(
+  List<_i19.RouteConfig> get routes => [
+        _i19.RouteConfig(
           '/#redirect',
           path: '/',
           redirectTo: '',
           fullMatch: true,
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           SplashViewRoute.name,
           path: '',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           AuthViewRoute.name,
           path: '/authView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           RegisterViewRoute.name,
           path: '/registerView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           LoginViewRoute.name,
           path: '/loginView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           ChoosePlanViewRoute.name,
           path: '/choosePlanView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           OtpViewRoute.name,
           path: '/otpView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           ResetPasswordViewRoute.name,
           path: '/resetPasswordView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           PickFavoritesViewRoute.name,
           path: '/pickFavoriteView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           UniqueCodeViewRoute.name,
           path: '/uniqueCodeView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           DashboardViewRoute.name,
           path: '/dashboard-view',
           children: [
-            _i18.RouteConfig(
+            _i19.RouteConfig(
               ExploreViewRoute.name,
               path: '',
               parent: DashboardViewRoute.name,
             ),
-            _i18.RouteConfig(
+            _i19.RouteConfig(
               LearningViewRoute.name,
               path: 'learning-view',
               parent: DashboardViewRoute.name,
             ),
-            _i18.RouteConfig(
+            _i19.RouteConfig(
               SavedViewRoute.name,
               path: 'saved-view',
               parent: DashboardViewRoute.name,
             ),
-            _i18.RouteConfig(
+            _i19.RouteConfig(
               ProfileViewRoute.name,
               path: 'profile-view',
               parent: DashboardViewRoute.name,
             ),
           ],
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           SettingViewsRoute.name,
           path: '/settingView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           CourseViewRoute.name,
           path: '/coursesView',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           CoursePreviewViewRoute.name,
           path: '/coursePreviewView',
+        ),
+        _i19.RouteConfig(
+          BasketViewRoute.name,
+          path: '/basketView',
         ),
       ];
 }
 
 /// generated route for
 /// [_i1.SplashView]
-class SplashViewRoute extends _i18.PageRouteInfo<void> {
+class SplashViewRoute extends _i19.PageRouteInfo<void> {
   const SplashViewRoute()
       : super(
           SplashViewRoute.name,
@@ -245,7 +256,7 @@ class SplashViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.AuthView]
-class AuthViewRoute extends _i18.PageRouteInfo<void> {
+class AuthViewRoute extends _i19.PageRouteInfo<void> {
   const AuthViewRoute()
       : super(
           AuthViewRoute.name,
@@ -257,7 +268,7 @@ class AuthViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.RegisterView]
-class RegisterViewRoute extends _i18.PageRouteInfo<void> {
+class RegisterViewRoute extends _i19.PageRouteInfo<void> {
   const RegisterViewRoute()
       : super(
           RegisterViewRoute.name,
@@ -269,7 +280,7 @@ class RegisterViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.LoginView]
-class LoginViewRoute extends _i18.PageRouteInfo<void> {
+class LoginViewRoute extends _i19.PageRouteInfo<void> {
   const LoginViewRoute()
       : super(
           LoginViewRoute.name,
@@ -281,7 +292,7 @@ class LoginViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.ChoosePlanView]
-class ChoosePlanViewRoute extends _i18.PageRouteInfo<void> {
+class ChoosePlanViewRoute extends _i19.PageRouteInfo<void> {
   const ChoosePlanViewRoute()
       : super(
           ChoosePlanViewRoute.name,
@@ -293,7 +304,7 @@ class ChoosePlanViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i6.OtpView]
-class OtpViewRoute extends _i18.PageRouteInfo<void> {
+class OtpViewRoute extends _i19.PageRouteInfo<void> {
   const OtpViewRoute()
       : super(
           OtpViewRoute.name,
@@ -305,7 +316,7 @@ class OtpViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i7.ResetPasswordView]
-class ResetPasswordViewRoute extends _i18.PageRouteInfo<void> {
+class ResetPasswordViewRoute extends _i19.PageRouteInfo<void> {
   const ResetPasswordViewRoute()
       : super(
           ResetPasswordViewRoute.name,
@@ -317,7 +328,7 @@ class ResetPasswordViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i8.PickFavoritesView]
-class PickFavoritesViewRoute extends _i18.PageRouteInfo<void> {
+class PickFavoritesViewRoute extends _i19.PageRouteInfo<void> {
   const PickFavoritesViewRoute()
       : super(
           PickFavoritesViewRoute.name,
@@ -329,7 +340,7 @@ class PickFavoritesViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i9.UniqueCodeView]
-class UniqueCodeViewRoute extends _i18.PageRouteInfo<void> {
+class UniqueCodeViewRoute extends _i19.PageRouteInfo<void> {
   const UniqueCodeViewRoute()
       : super(
           UniqueCodeViewRoute.name,
@@ -341,8 +352,8 @@ class UniqueCodeViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i10.DashboardView]
-class DashboardViewRoute extends _i18.PageRouteInfo<void> {
-  const DashboardViewRoute({List<_i18.PageRouteInfo>? children})
+class DashboardViewRoute extends _i19.PageRouteInfo<void> {
+  const DashboardViewRoute({List<_i19.PageRouteInfo>? children})
       : super(
           DashboardViewRoute.name,
           path: '/dashboard-view',
@@ -354,10 +365,10 @@ class DashboardViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i11.SettingViews]
-class SettingViewsRoute extends _i18.PageRouteInfo<SettingViewsRouteArgs> {
+class SettingViewsRoute extends _i19.PageRouteInfo<SettingViewsRouteArgs> {
   SettingViewsRoute({
-    _i19.Key? key,
-    required _i17.PageWidgetType pageType,
+    _i20.Key? key,
+    required _i18.PageWidgetType pageType,
   }) : super(
           SettingViewsRoute.name,
           path: '/settingView',
@@ -376,9 +387,9 @@ class SettingViewsRouteArgs {
     required this.pageType,
   });
 
-  final _i19.Key? key;
+  final _i20.Key? key;
 
-  final _i17.PageWidgetType pageType;
+  final _i18.PageWidgetType pageType;
 
   @override
   String toString() {
@@ -388,7 +399,7 @@ class SettingViewsRouteArgs {
 
 /// generated route for
 /// [_i12.CourseView]
-class CourseViewRoute extends _i18.PageRouteInfo<void> {
+class CourseViewRoute extends _i19.PageRouteInfo<void> {
   const CourseViewRoute()
       : super(
           CourseViewRoute.name,
@@ -400,7 +411,7 @@ class CourseViewRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i13.CoursePreviewView]
-class CoursePreviewViewRoute extends _i18.PageRouteInfo<void> {
+class CoursePreviewViewRoute extends _i19.PageRouteInfo<void> {
   const CoursePreviewViewRoute()
       : super(
           CoursePreviewViewRoute.name,
@@ -411,8 +422,20 @@ class CoursePreviewViewRoute extends _i18.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i14.ExploreView]
-class ExploreViewRoute extends _i18.PageRouteInfo<void> {
+/// [_i14.BasketView]
+class BasketViewRoute extends _i19.PageRouteInfo<void> {
+  const BasketViewRoute()
+      : super(
+          BasketViewRoute.name,
+          path: '/basketView',
+        );
+
+  static const String name = 'BasketViewRoute';
+}
+
+/// generated route for
+/// [_i15.ExploreView]
+class ExploreViewRoute extends _i19.PageRouteInfo<void> {
   const ExploreViewRoute()
       : super(
           ExploreViewRoute.name,
@@ -423,8 +446,8 @@ class ExploreViewRoute extends _i18.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i15.LearningView]
-class LearningViewRoute extends _i18.PageRouteInfo<void> {
+/// [_i16.LearningView]
+class LearningViewRoute extends _i19.PageRouteInfo<void> {
   const LearningViewRoute()
       : super(
           LearningViewRoute.name,
@@ -435,8 +458,8 @@ class LearningViewRoute extends _i18.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i16.SavedView]
-class SavedViewRoute extends _i18.PageRouteInfo<void> {
+/// [_i17.SavedView]
+class SavedViewRoute extends _i19.PageRouteInfo<void> {
   const SavedViewRoute()
       : super(
           SavedViewRoute.name,
@@ -447,8 +470,8 @@ class SavedViewRoute extends _i18.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i17.ProfileView]
-class ProfileViewRoute extends _i18.PageRouteInfo<void> {
+/// [_i18.ProfileView]
+class ProfileViewRoute extends _i19.PageRouteInfo<void> {
   const ProfileViewRoute()
       : super(
           ProfileViewRoute.name,

@@ -5,6 +5,7 @@ import 'package:produtech/app/locator.dart';
 import 'package:produtech/controllers/auth/login_controller.dart';
 import 'package:produtech/controllers/auth/pick_favorite_controller.dart';
 import 'package:produtech/controllers/auth/register_controller.dart';
+import 'package:produtech/controllers/dashboard/basket/basket_controller.dart';
 import 'package:produtech/controllers/dashboard/dashboard_controller.dart';
 import 'package:produtech/controllers/dashboard/explore/explore_controller.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<PickFavoriteController>.value(value: PickFavoriteController()),
         ChangeNotifierProvider<DashBoardViewController>.value(value: DashBoardViewController()),
         ChangeNotifierProvider<ExploreViewController>.value(value: ExploreViewController()),
+        ChangeNotifierProvider<BasketController>.value(value: BasketController()),
       ],
       child: MaterialApp.router(
         title: 'Edtech',
