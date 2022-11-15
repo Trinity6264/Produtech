@@ -5,6 +5,8 @@ import 'package:produtech/views/auth/otp_view.dart';
 import 'package:produtech/views/auth/register_view.dart';
 import 'package:produtech/views/auth/reset_password_view.dart';
 import 'package:produtech/views/auth/unique_code_view.dart';
+import 'package:produtech/views/dashboard/course/course_preview_view.dart';
+import 'package:produtech/views/dashboard/course/course_view.dart';
 import 'package:produtech/views/dashboard/dashboard_view.dart';
 import 'package:produtech/views/dashboard/explore/explore_view.dart';
 import 'package:produtech/views/dashboard/learning/learning_view.dart';
@@ -41,6 +43,8 @@ import 'package:produtech/views/splash/splash_view.dart';
     ),
     //other sub routes
         AutoRoute(path: '/settingView', page: SettingViews),
+        AutoRoute(path: '/coursesView', page: CourseView),
+        AutoRoute(path: '/coursePreviewView', page: CoursePreviewView),
   ],
 )
 class $AppRouter {}

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:produtech/app/app.gr.dart';
+import 'package:produtech/app/locator.dart';
+import 'package:produtech/app/routePath.dart';
 import 'package:produtech/helpers/asset_pallet.dart';
+import 'package:produtech/services/navigation.dart';
 import 'package:produtech/views/dashboard/explore/widget/course_panel.dart';
 import 'package:produtech/widget/course_card.dart';
 import 'package:produtech/widget/custom_appbar.dart';
@@ -11,6 +15,7 @@ import 'package:produtech/widget/video_card.dart';
 
 class ExploreView extends StatelessWidget {
   const ExploreView({super.key});
+  static final _navService = locator.get<NavigationService>();
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +93,25 @@ class ExploreView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: size.height * .04),
-              const TitleWidget(title: 'Courses for you'),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const TitleWidget(title: 'Courses for you'),
+                  TextButton(
+                    onPressed: () => _navService.navigateTo(
+                      const CourseViewRoute()
+                    ),
+                    child: Text(
+                      'See More',
+                      style: GoogleFonts.poppins(
+                        color: AssetPallet.primaryColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  )
+                ],
+              ),
               SizedBox(height: size.height * .04),
               const CoursePanel(),
               SizedBox(height: size.height * .04),
@@ -98,7 +121,7 @@ class ExploreView extends StatelessWidget {
               SizedBox(height: size.height * .04),
               const TitleWidget(title: 'Leader Board'),
               SizedBox(height: size.height * .04),
-              LeaderBoard(),
+              const LeaderBoard(),
               SizedBox(height: size.height * .04),
               const TitleWidget(title: 'What\'s hot'),
               SizedBox(height: size.height * .04),

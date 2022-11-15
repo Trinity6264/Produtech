@@ -19,6 +19,7 @@ class SavedView extends HookWidget {
           width: double.infinity,
           height: double.infinity,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Saved Contents',
